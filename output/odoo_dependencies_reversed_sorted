@@ -1,0 +1,287 @@
+// Odoo Module Dependencies (dependensi -> modul)
+digraph {
+	fontsize=10 rankdir=LR
+	account_dynamic_reports [label=account_dynamic_reports]
+	account_financial_report [label=account_financial_report]
+	accounting_pdf_reports [label=accounting_pdf_reports]
+	app_odoo_customize [label=app_odoo_customize]
+	asset [label=asset]
+	auditlog [label=auditlog]
+	base_multi_company [label=base_multi_company]
+	bi_financial_excel_reports [label=bi_financial_excel_reports]
+	bi_financial_pdf_reports [label=bi_financial_pdf_reports]
+	currency_rate_inverted [label=currency_rate_inverted]
+	database_cleanup [label=database_cleanup]
+	date_range [label=date_range]
+	dynamic_xlsx [label=dynamic_xlsx]
+	employee_expense_advance [label=employee_expense_advance]
+	enterprise_backend_theme [label=enterprise_backend_theme]
+	fits_account_asset [label=fits_account_asset]
+	fits_calk_bk [label=fits_calk_bk]
+	fits_cancel_roles [label=fits_cancel_roles]
+	fits_cashflow [label=fits_cashflow]
+	fits_custom_accounting [label=fits_custom_accounting]
+	fits_custom_manufactur [label=fits_custom_manufactur]
+	fits_custom_project [label=fits_custom_project]
+	fits_custom_sixmurs [label=fits_custom_sixmurs]
+	fits_custom_sixmurs_nk [label=fits_custom_sixmurs_nk]
+	fits_efaktur_code [label=fits_efaktur_code]
+	fits_filter_project [label=fits_filter_project]
+	fits_invoice_revison [label=fits_invoice_revison]
+	fits_manual_currency_rate [label=fits_manual_currency_rate]
+	fits_overtime_validate [label=fits_overtime_validate]
+	fits_parent_asset [label=fits_parent_asset]
+	fits_partner_contact [label=fits_partner_contact]
+	fits_purchase_from_invoice [label=fits_purchase_from_invoice]
+	fits_purchase_revision [label=fits_purchase_revision]
+	fits_receipt_consigment [label=fits_receipt_consigment]
+	fits_sales_revision [label=fits_sales_revision]
+	fits_sign_report [label=fits_sign_report]
+	fits_sixmurs_report [label=fits_sixmurs_report]
+	fits_stock_expire_report [label=fits_stock_expire_report]
+	fits_subtask [label=fits_subtask]
+	hr_overtime_request [label=hr_overtime_request]
+	ir_filters_multi_company [label=ir_filters_multi_company]
+	kg_hide_menu [label=kg_hide_menu]
+	ks_dashboard_ninja [label=ks_dashboard_ninja]
+	ks_dn_advance [label=ks_dn_advance]
+	mass_editing [label=mass_editing]
+	muk_autovacuum [label=muk_autovacuum]
+	muk_utils [label=muk_utils]
+	muk_web_theme [label=muk_web_theme]
+	muk_web_utils [label=muk_web_utils]
+	multi_level_approval [label=multi_level_approval]
+	multi_level_approval_configuration [label=multi_level_approval_configuration]
+	multi_level_approval_hr [label=multi_level_approval_hr]
+	om_account_accountant [label=om_account_accountant]
+	om_account_asset [label=om_account_asset]
+	om_account_budget [label=om_account_budget]
+	partner_multi_company [label=partner_multi_company]
+	product_ageing_report [label=product_ageing_report]
+	product_combo_pack [label=product_combo_pack]
+	product_multi_company [label=product_multi_company]
+	product_packaging_delivery [label=product_packaging_delivery]
+	product_tax_multicompany_default [label=product_tax_multicompany_default]
+	project_stage_state [label=project_stage_state]
+	project_tag [label=project_tag]
+	project_task_default_stage [label=project_task_default_stage]
+	purchase_multic_fix [label=purchase_multic_fix]
+	purchase_request [label=purchase_request]
+	report_xlsx [label=report_xlsx]
+	report_xlsx_helper [label=report_xlsx_helper]
+	res_partner_category_multi_company [label=res_partner_category_multi_company]
+	res_partner_industry_multi_company [label=res_partner_industry_multi_company]
+	sale_discount_display_amount [label=sale_discount_display_amount]
+	sale_discount_total [label=sale_discount_total]
+	sequence_reset_period [label=sequence_reset_period]
+	sh_project_stages [label=sh_project_stages]
+	silent_inventory_adjustment [label=silent_inventory_adjustment]
+	stock_card_report [label=stock_card_report]
+	stock_move_line_multi_company_security [label=stock_move_line_multi_company_security]
+	stock_production_lot_multi_company [label=stock_production_lot_multi_company]
+	vit_efaktur [label=vit_efaktur]
+	vit_efaktur_default [label=vit_efaktur_default]
+	vit_kelurahan [label=vit_kelurahan]
+	web_responsive [label=web_responsive]
+	account [label=account color=gray style=dashed]
+	account_cancel [label=account_cancel color=gray style=dashed]
+	analytic [label=analytic color=gray style=dashed]
+	base [label=base color=gray style=dashed]
+	base_setup [label=base_setup color=gray style=dashed]
+	bus [label=bus color=gray style=dashed]
+	contacts [label=contacts color=gray style=dashed]
+	decimal_precision [label=decimal_precision color=gray style=dashed]
+	delivery [label=delivery color=gray style=dashed]
+	hr [label=hr color=gray style=dashed]
+	hr_expense [label=hr_expense color=gray style=dashed]
+	hr_payroll [label=hr_payroll color=gray style=dashed]
+	iap [label=iap color=gray style=dashed]
+	mail [label=mail color=gray style=dashed]
+	mrp [label=mrp color=gray style=dashed]
+	portal [label=portal color=gray style=dashed]
+	product [label=product color=gray style=dashed]
+	product_expiry [label=product_expiry color=gray style=dashed]
+	project [label=project color=gray style=dashed]
+	purchase [label=purchase color=gray style=dashed]
+	purchase_stock [label=purchase_stock color=gray style=dashed]
+	sale [label=sale color=gray style=dashed]
+	sale_management [label=sale_management color=gray style=dashed]
+	sale_stock [label=sale_stock color=gray style=dashed]
+	sale_timesheet [label=sale_timesheet color=gray style=dashed]
+	stock [label=stock color=gray style=dashed]
+	stock_account [label=stock_account color=gray style=dashed]
+	web [label=web color=gray style=dashed]
+	web_editor [label=web_editor color=gray style=dashed]
+	web_settings_dashboard [label=web_settings_dashboard color=gray style=dashed]
+	account -> account_dynamic_reports
+	account -> account_financial_report
+	account -> accounting_pdf_reports
+	account -> bi_financial_pdf_reports
+	account -> fits_calk_bk
+	account -> fits_cancel_roles
+	account -> fits_cashflow
+	account -> fits_custom_accounting
+	account -> fits_custom_sixmurs
+	account -> fits_custom_sixmurs_nk
+	account -> fits_efaktur_code
+	account -> fits_invoice_revison
+	account -> fits_manual_currency_rate
+	account -> fits_partner_contact
+	account -> fits_purchase_from_invoice
+	account -> fits_sign_report
+	account -> fits_sixmurs_report
+	account -> om_account_asset
+	account -> om_account_budget
+	account -> product_tax_multicompany_default
+	account -> sale_discount_total
+	account -> vit_efaktur
+	account -> vit_efaktur_default
+	account_cancel -> fits_cancel_roles
+	account_dynamic_reports -> dynamic_xlsx
+	accounting_pdf_reports -> om_account_accountant
+	analytic -> fits_overtime_validate
+	asset -> fits_account_asset
+	asset -> fits_parent_asset
+	base -> app_odoo_customize
+	base -> auditlog
+	base -> currency_rate_inverted
+	base -> database_cleanup
+	base -> fits_account_asset
+	base -> fits_filter_project
+	base -> fits_sixmurs_report
+	base -> ir_filters_multi_company
+	base -> kg_hide_menu
+	base -> ks_dashboard_ninja
+	base -> mass_editing
+	base -> product_combo_pack
+	base -> report_xlsx
+	base -> res_partner_category_multi_company
+	base -> res_partner_industry_multi_company
+	base -> sequence_reset_period
+	base -> silent_inventory_adjustment
+	base -> vit_kelurahan
+	base_multi_company -> partner_multi_company
+	base_multi_company -> product_multi_company
+	base_setup -> ks_dashboard_ninja
+	base_setup -> muk_utils
+	bi_financial_pdf_reports -> account_financial_report
+	bi_financial_pdf_reports -> bi_financial_excel_reports
+	bi_financial_pdf_reports -> fits_calk_bk
+	bi_financial_pdf_reports -> fits_cashflow
+	bus -> ks_dashboard_ninja
+	contacts -> vit_kelurahan
+	date_range -> account_financial_report
+	date_range -> stock_card_report
+	decimal_precision -> ks_dashboard_ninja
+	delivery -> fits_custom_sixmurs
+	delivery -> fits_custom_sixmurs_nk
+	fits_custom_sixmurs -> fits_custom_manufactur
+	hr -> fits_filter_project
+	hr -> fits_overtime_validate
+	hr -> hr_overtime_request
+	hr -> multi_level_approval_hr
+	hr_expense -> employee_expense_advance
+	hr_overtime_request -> fits_overtime_validate
+	hr_payroll -> fits_overtime_validate
+	hr_payroll -> hr_overtime_request
+	iap -> app_odoo_customize
+	ks_dashboard_ninja -> ks_dn_advance
+	mail -> app_odoo_customize
+	mail -> ks_dn_advance
+	mail -> multi_level_approval
+	mail -> web_responsive
+	mrp -> fits_cancel_roles
+	mrp -> fits_custom_manufactur
+	mrp -> fits_custom_sixmurs_nk
+	muk_autovacuum -> muk_web_utils
+	muk_utils -> muk_autovacuum
+	muk_web_utils -> muk_web_theme
+	multi_level_approval -> multi_level_approval_configuration
+	multi_level_approval -> multi_level_approval_hr
+	multi_level_approval_configuration -> purchase_request
+	multi_level_approval_hr -> multi_level_approval_configuration
+	om_account_asset -> fits_account_asset
+	om_account_asset -> om_account_accountant
+	om_account_budget -> om_account_accountant
+	portal -> hr_overtime_request
+	product -> fits_receipt_consigment
+	product -> multi_level_approval
+	product -> product_ageing_report
+	product -> product_multi_company
+	product -> product_packaging_delivery
+	product -> product_tax_multicompany_default
+	product -> purchase_request
+	product_expiry -> fits_stock_expire_report
+	project -> fits_custom_project
+	project -> fits_filter_project
+	project -> fits_subtask
+	project -> project_stage_state
+	project -> project_tag
+	project -> project_task_default_stage
+	project -> sh_project_stages
+	purchase -> fits_cancel_roles
+	purchase -> fits_custom_sixmurs
+	purchase -> fits_custom_sixmurs_nk
+	purchase -> fits_partner_contact
+	purchase -> fits_purchase_from_invoice
+	purchase -> fits_purchase_revision
+	purchase -> fits_receipt_consigment
+	purchase -> fits_sign_report
+	purchase -> fits_sixmurs_report
+	purchase -> multi_level_approval_configuration
+	purchase -> purchase_multic_fix
+	purchase -> purchase_request
+	purchase_request -> fits_cancel_roles
+	purchase_stock -> purchase_request
+	report_xlsx -> account_financial_report
+	report_xlsx -> dynamic_xlsx
+	report_xlsx -> report_xlsx_helper
+	report_xlsx_helper -> stock_card_report
+	sale -> fits_cancel_roles
+	sale -> fits_custom_sixmurs
+	sale -> fits_custom_sixmurs_nk
+	sale -> fits_partner_contact
+	sale -> fits_sign_report
+	sale -> fits_sixmurs_report
+	sale -> multi_level_approval_configuration
+	sale -> product_packaging_delivery
+	sale -> sale_discount_total
+	sale_management -> fits_sales_revision
+	sale_management -> product_combo_pack
+	sale_management -> sale_discount_display_amount
+	sale_stock -> fits_custom_sixmurs
+	sale_stock -> fits_custom_sixmurs_nk
+	sale_stock -> product_packaging_delivery
+	sale_timesheet -> fits_overtime_validate
+	stock -> asset
+	stock -> fits_cancel_roles
+	stock -> fits_custom_sixmurs
+	stock -> fits_custom_sixmurs_nk
+	stock -> fits_receipt_consigment
+	stock -> fits_sixmurs_report
+	stock -> fits_stock_expire_report
+	stock -> product_ageing_report
+	stock -> product_combo_pack
+	stock -> product_packaging_delivery
+	stock -> silent_inventory_adjustment
+	stock -> stock_card_report
+	stock -> stock_move_line_multi_company_security
+	stock -> stock_production_lot_multi_company
+	stock -> vit_efaktur
+	stock -> vit_efaktur_default
+	stock_account -> fits_receipt_consigment
+	vit_efaktur -> fits_efaktur_code
+	vit_kelurahan -> vit_efaktur
+	vit_kelurahan -> vit_efaktur_default
+	web -> app_odoo_customize
+	web -> date_range
+	web -> enterprise_backend_theme
+	web -> fits_custom_sixmurs
+	web -> fits_custom_sixmurs_nk
+	web -> ks_dashboard_ninja
+	web -> report_xlsx
+	web -> web_responsive
+	web_editor -> muk_web_utils
+	web_responsive -> enterprise_backend_theme
+	web_settings_dashboard -> app_odoo_customize
+}

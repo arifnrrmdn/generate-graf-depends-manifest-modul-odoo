@@ -1,10 +1,12 @@
 import os
 import ast
 from graphviz import Digraph
+from collections import defaultdict
 
 # Path ke folder addons lokal
 ADDONS_PATH = "/home/ariev/Developments/odoo12-docker-dev/addons"
 OUTPUT_DIAGRAM = "/home/ariev/Developments/tools-koleksi-dependensi-manifest-modul-odoo/output"
+
 # Dictionary untuk menyimpan hubungan dependensi
 dependencies = {}
 
@@ -20,31 +22,40 @@ for module_name in os.listdir(ADDONS_PATH):
             except Exception as e:
                 print(f"Gagal membaca {manifest_path}: {e}")
 
+# Balik mapping jadi dependensi -> list modul yg tergantung
+reverse_deps = defaultdict(list)
+all_modules = set(dependencies.keys())
+
+for module, deps in dependencies.items():
+    for dep in deps:
+        reverse_deps[dep].append(module)
+
+# Siapkan set modul eksternal (yang tidak ada di addons lokal)
+external_modules = set(reverse_deps.keys()) - all_modules
+
 # Buat graf
-dot = Digraph(comment="Odoo Module Dependencies", format="png")
+dot = Digraph(comment="Odoo Module Dependencies (dependensi -> modul)", format="png")
 dot.attr(rankdir="LR", fontsize="10")
 
-# Tambahkan semua node
-all_modules = set(dependencies.keys())
-external_modules = set()
-
-for module, deps in dependencies.items():
-    dot.node(module, module)  # Node untuk modul lokal
-    for dep in deps:
-        if dep not in all_modules:  # Modul eksternal
-            external_modules.add(dep)
-
-# Tambahkan node eksternal dengan warna berbeda
-for ext_mod in external_modules:
+# Tambahkan node lokal dan eksternal
+for module in sorted(all_modules):
+    dot.node(module, module)
+for ext_mod in sorted(external_modules):
     dot.node(ext_mod, ext_mod, style="dashed", color="gray")
 
-# Tambahkan edges
-for module, deps in dependencies.items():
-    for dep in deps:
-        dot.edge(dep, module)  # Tetap hubungkan meskipun eksternal
+# Tambahkan edges dari dependensi ke modul yang tergantung, urut alfabet
+for dep in sorted(reverse_deps.keys()):
+    for mod in sorted(reverse_deps[dep]):
+        dot.edge(dep, mod)
 
 # Simpan dan render
-output_file = os.path.join(OUTPUT_DIAGRAM, "odoo_dependencies_full")
+output_file = os.path.join(OUTPUT_DIAGRAM, "odoo_dependencies_reversed_sorted")
 dot.render(output_file, view=False)
 
 print(f"Graf dependensi tersimpan di {output_file}.png")
+
+# Output teks format dependensi -> modul, urut berdasarkan dependensi dan modul
+print("\nDaftar dependensi (format dependensi -> modul), terurut:")
+for dep in sorted(reverse_deps.keys()):
+    for mod in sorted(reverse_deps[dep]):
+        print(f"{dep} -> {mod}")
