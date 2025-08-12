@@ -33,4 +33,7 @@ Tool ini digunakan untuk **menggambarkan hubungan dependensi antar modul Odoo** 
 - Node abu-abu putus-putus = modul eksternal (tidak ditemukan di folder addons).
 - Panah menunjukkan arah dependensi (dependensi → modul).
 
-
+## Screenshot
+![](https://github.com/arifnrrmdn/generate-graf-depends-manifest-modul-odoo/blob/main/screenshot/1.png)
+![](https://github.com/arifnrrmdn/generate-graf-depends-manifest-modul-odoo/blob/main/screenshot/2.png)
+![](https://github.com/arifnrrmdn/generate-graf-depends-manifest-modul-odoo/blob/main/output/odoo_dependencies_reversed_sorted.png)
